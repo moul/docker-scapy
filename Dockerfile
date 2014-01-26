@@ -2,7 +2,7 @@ FROM moul/python-dev
 MAINTAINER Manfred Touron "m@42.am"
 
 RUN apt-get -qq -y install \
-    gcc python-dev && \
+    gcc python-dev tcpdump && \
     apt-get clean
 RUN pip install -q --allow-all-external \
     numpy \
