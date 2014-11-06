@@ -1,7 +1,8 @@
 FROM moul/python-dev
 MAINTAINER Manfred Touron "m@42.am"
 
-RUN apt-get -qq -y install \
+RUN apt-get update && \
+    apt-get -qq -y install \
     gcc python-dev tcpdump graphviz imagemagick \
     swig python-crypto libpcap0.7 libpcap-dev && \
     apt-get clean
